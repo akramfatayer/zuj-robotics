@@ -75,12 +75,12 @@ The course is organized into **four progressive project blocks**, each building 
 
 | # | Topic | Format |
 |---|-------|--------|
-| 1 | [Introduction to Robotics](lectures/Introduction_to_Robotics.pptx) | PPTX |
-| 2 | [Computer Vision for Warehouse Robots](lectures/Computer_Vision_for_Warehouse_Robots.pptx) | PPTX |
-| 3 | [Robot Localization and State Estimation](lectures/Robot_Localization_and_State_Estimation.pptx) | PPTX |
-| 4 | [Distance Sensing and Occupancy Grid Mapping](lectures/Distance_Sensing_and_Occupancy_Grid_Mapping.pptx) | PPTX |
-| 5 | [Path Planning and Navigation](lectures/Lab_5_Path_Planning_and_Navigation.pdf) | PDF |
-| 6 | [Path Tracking and Control](lectures/Lab_6_Path_Tracking_and_Control.pdf) | PDF |
+| 1 | [Introduction to Robotics](lectures/pdf/Introduction_to_Robotics.pdf) | PDF |
+| 2 | [Computer Vision for Warehouse Robots](lectures/pdf/Computer_Vision_for_Warehouse_Robots.pdf) | PDF |
+| 3 | [Robot Localization and State Estimation](lectures/pdf/Robot_Localization_and_State_Estimation.pdf) | PDF |
+| 4 | [Distance Sensing and Occupancy Grid Mapping](lectures/pdf/Distance_Sensing_and_Occupancy_Grid_Mapping.pdf) | PDF |
+| 5 | [Path Planning and Navigation](lectures/pdf/Lab_5_Path_Planning_and_Navigation.pdf) | PDF |
+| 6 | [Path Tracking and Control](lectures/pdf/Lab_6_Path_Tracking_and_Control.pdf) | PDF |
 
 ### Labs
 
@@ -102,10 +102,10 @@ The course is organized into **four progressive project blocks**, each building 
 
 | Resource | Description |
 |----------|-------------|
-| [Course Summary](assessments/Course_Summary_V2.docx) | Complete course review |
-| [Formula Sheet](assessments/Formula_Sheet_V2.docx) | Reference formulas for the exam |
-| [Practice Exam](assessments/Practice_Exam_V2.docx) | Sample exam questions |
-| [Practice Exam — Answer Key](assessments/Practice_Exam_V2_Answer_Key.docx) | Solutions to practice exam |
+| [Course Summary](assessments/md/Course_Summary_V2.md) | Complete course review |
+| [Formula Sheet](assessments/md/Formula_Sheet_V2.md) | Reference formulas for the exam |
+| [Practice Exam](assessments/md/Practice_Exam_V2.md) | Sample exam questions |
+| [Practice Exam — Answer Key](assessments/md/Practice_Exam_V2_Answer_Key.md) | Solutions to practice exam |
 
 ---
 
