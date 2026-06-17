@@ -4,6 +4,23 @@ The labs in this course form a **progressive integration pipeline**. Each lab bu
 
 ---
 
+## Run Labs Online
+
+Every lab is available as a **Jupyter Notebook** that you can run directly in Google Colab — no installation required. Just click the badge next to each lab:
+
+| Lab | Topic | Run Online |
+|-----|-------|:----------:|
+| Lab 1 | Hello, Robot! | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-01-hello-robot/notebook.ipynb) |
+| Lab 3 | Localization | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-03-localization/notebook.ipynb) |
+| Lab 4 | Mapping | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-04-mapping/notebook.ipynb) |
+| Lab 5 | Path Planning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-05-path-planning/notebook.ipynb) |
+| Lab 6 | Tracking & Control | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-06-tracking-control/notebook.ipynb) |
+
+!!! info "Colab vs Local"
+    **Google Colab** runs PyBullet in headless mode (no 3D GUI window). You'll see matplotlib plots of trajectories and sensor data instead of the live 3D simulation. For the full interactive 3D experience, run the labs locally using your Conda environment.
+
+---
+
 ## The Integration Pipeline
 
 ```
@@ -27,7 +44,7 @@ The labs in this course form a **progressive integration pipeline**. Each lab bu
 ## Lab Progression
 
 | Lab | Title | What You Build | Builds On |
-|-----|-------|---------------|-----------|
+|-----|-------|----------------|-----------|
 | [Lab 1](lab-01-hello-robot/README.md) | Hello, Robot! | Spawn a robot, read sensors, drive in a square | — (foundation) |
 | [Lab 3](lab-03-localization/README.md) | Localization | Kalman filter fusing odometry + GPS | Lab 1 (sensors) |
 | [Lab 4](lab-04-mapping/README.md) | Mapping | Occupancy grid from LiDAR scans | Lab 1 (sensors) + Lab 3 (pose) |
@@ -54,15 +71,15 @@ All labs contribute to the **60% PBL component** of your final grade.
 All labs use the same Python environment. Set it up once in Lab 1:
 
 ```bash
-conda create -n robotics_YourName python=3.11 -y
-conda activate robotics_YourName
+conda create -n robotics_YourFirstName python=3.11 -y
+conda activate robotics_YourFirstName
 conda install -c conda-forge pybullet numpy matplotlib opencv -y
 ```
 
 Activate this environment at the start of every lab session:
 
 ```bash
-conda activate robotics_YourName
+conda activate robotics_YourFirstName
 ```
 
 ---
