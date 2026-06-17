@@ -95,3 +95,23 @@ Stuck? That's part of the process! Here’s how to get unstuck:
 3.  **Troubleshoot:** Check the common issues listed in the original `README.md`.
 4.  **Collaborate:** Discuss the problem with your peers on the course forum.
 5.  **Ask for Help:** Attend office hours for direct support.
+
+---
+
+## Download Lab Files
+
+Run this lab online with one click, or download the Python files to run locally:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-01-hello-robot/notebook.ipynb)
+&nbsp;&nbsp;**or download individual files below:**
+
+| File | Description |
+|------|-------------|
+| [`spawn_robot.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-01-hello-robot/spawn_robot.py) | Activity 1 — Spawn the robot in simulation |
+| [`read_sensors.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-01-hello-robot/read_sensors.py) | Activity 2 — Read position, orientation, and camera |
+| [`move_robot.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-01-hello-robot/move_robot.py) | Activity 3 — Drive the robot in a square |
+| [`visualize_trajectory.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-01-hello-robot/visualize_trajectory.py) | Activity 4 — Plot and analyse the trajectory |
+
+> **Download everything at once:** [Download full repository as ZIP](https://github.com/fatayer8891-boop/zuj-robotics/archive/refs/heads/main.zip) — extract and navigate to `zuj-robotics-main/labs/lab-01-hello-robot/`
+
+---

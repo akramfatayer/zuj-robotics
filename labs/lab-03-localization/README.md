@@ -61,3 +61,22 @@ Zip the following files and upload them to the Moodle submission portal:
 2. `activity2_pybullet_2d.png`
 3. `activity3_pybullet_fusion.png`
 4. A short text file (`answers.txt`) answering this question: *In Activity 3, why does the position uncertainty (Plot D) look like a sawtooth pattern? What causes it to grow, and what causes it to drop?*
+
+---
+
+## Download Lab Files
+
+Run this lab online with one click, or download the Python files to run locally:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-03-localization/notebook.ipynb)
+&nbsp;&nbsp;**or download individual files below:**
+
+| File | Description |
+|------|-------------|
+| [`activity1_straight_1d.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-03-localization/activity1_straight_1d.py) | Activity 1 — 1-D Kalman filter on a straight run |
+| [`activity2_pybullet_2d_v3.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-03-localization/activity2_pybullet_2d_v3.py) | Activity 2 — 2-D Kalman filter with noisy odometry |
+| [`activity3_pybullet_fusion.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-03-localization/activity3_pybullet_fusion.py) | Activity 3 — Sensor fusion (odometry + GPS) |
+
+> **Download everything at once:** [Download full repository as ZIP](https://github.com/fatayer8891-boop/zuj-robotics/archive/refs/heads/main.zip) — extract and navigate to `zuj-robotics-main/labs/lab-03-localization/`
+
+---

@@ -217,5 +217,26 @@ Lab6_PathTracking/
 
 ---
 
+## Download Lab Files
+
+Run this lab online with one click, or download the Python files to run locally:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-06-tracking-control/notebook.ipynb)
+&nbsp;&nbsp;**or download individual files below:**
+
+| File | Description |
+|------|-------------|
+| [`activity1_pid.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-06-tracking-control/activity1_pid.py) | Activity 1 — PID controller |
+| [`activity2_pure_pursuit.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-06-tracking-control/activity2_pure_pursuit.py) | Activity 2 — Pure Pursuit controller |
+| [`activity3_warehouse.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-06-tracking-control/activity3_warehouse.py) | Activity 3 — Full pipeline: plan + track in warehouse |
+| [`check_my_lab.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-06-tracking-control/check_my_lab.py) | Auto-grader — Run this to validate your work |
+| [`lab5_astar.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-06-tracking-control/lab5_astar.py) | Dependency — A* helper from Lab 5 |
+
+> **Download everything at once:** [Download full repository as ZIP](https://github.com/fatayer8891-boop/zuj-robotics/archive/refs/heads/main.zip) — extract and navigate to `zuj-robotics-main/labs/lab-06-tracking-control/`
+
+---
+
+---
+
 *Dr. Akram Fatayer · a.fatayer@zuj.edu.jo*
 *linkedin.com/in/akram-fatayer · Al-Zaytoonah University of Jordan*

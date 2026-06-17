@@ -202,5 +202,24 @@ Lab5_PathPlanning/
 
 ---
 
+## Download Lab Files
+
+Run this lab online with one click, or download the Python files to run locally:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-05-path-planning/notebook.ipynb)
+&nbsp;&nbsp;**or download individual files below:**
+
+| File | Description |
+|------|-------------|
+| [`activity1_astar.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-05-path-planning/activity1_astar.py) | Activity 1 — A* search on a grid |
+| [`activity2_rrt.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-05-path-planning/activity2_rrt.py) | Activity 2 — RRT in continuous space |
+| [`activity3_warehouse.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-05-path-planning/activity3_warehouse.py) | Activity 3 — Plan a path through the warehouse |
+
+> **Download everything at once:** [Download full repository as ZIP](https://github.com/fatayer8891-boop/zuj-robotics/archive/refs/heads/main.zip) — extract and navigate to `zuj-robotics-main/labs/lab-05-path-planning/`
+
+---
+
+---
+
 *Dr. Akram Fatayer · a.fatayer@zuj.edu.jo*
 *linkedin.com/in/akram-fatayer · Al-Zaytoonah University of Jordan*

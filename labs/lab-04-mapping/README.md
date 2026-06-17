@@ -201,3 +201,22 @@ A: Yes! Change `robot_type="r2d2"` to `robot_type="husky"` in Activity 3. Husky 
 
 **Good luck with your mapping implementation!** 🤖🗺️
 
+---
+
+## Download Lab Files
+
+Run this lab online with one click, or download the Python files to run locally:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-04-mapping/notebook.ipynb)
+&nbsp;&nbsp;**or download individual files below:**
+
+| File | Description |
+|------|-------------|
+| [`activity1_lidar_viz.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-04-mapping/activity1_lidar_viz.py) | Activity 1 — Visualise raw LiDAR scans |
+| [`activity2_basic_grid.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-04-mapping/activity2_basic_grid.py) | Activity 2 — Build a basic occupancy grid |
+| [`activity3_warehouse_mapping.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-04-mapping/activity3_warehouse_mapping.py) | Activity 3 — Map the full warehouse environment |
+| [`warehouse_environment.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-04-mapping/warehouse_environment.py) | Helper — Warehouse environment definition |
+
+> **Download everything at once:** [Download full repository as ZIP](https://github.com/fatayer8891-boop/zuj-robotics/archive/refs/heads/main.zip) — extract and navigate to `zuj-robotics-main/labs/lab-04-mapping/`
+
+---
