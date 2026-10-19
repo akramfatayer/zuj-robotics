@@ -12,12 +12,12 @@ Your R2D2 robot has two sensors to help it answer this question:
 ---
 
 ## Environment Setup
-You will use the same Conda environment you created in Lab 1. There is no need to reinstall anything!
+You will use the same `zuj-robotics` environment as in Lab 1. There is no need to reinstall anything!
 
-1. Open your terminal or Anaconda Prompt.
-2. Activate your environment:
+1. On a lab PC, double-click **Robotics Lab** on the desktop. On your own laptop, open your terminal or Miniforge/Anaconda Prompt.
+2. Activate the environment (lab PCs do this for you):
    ```bash
-   conda activate robotics_YourFirstName
+   conda activate zuj-robotics
    ```
 3. Navigate to the folder containing this lab's files.
 
@@ -68,15 +68,15 @@ Zip the following files and upload them to the Moodle submission portal:
 
 Run this lab online with one click, or download the Python files to run locally:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-03-localization/notebook.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akramfatayer/zuj-robotics/blob/main/labs/lab-03-localization/Lab_03_Localization.ipynb)
 &nbsp;&nbsp;**or download individual files below:**
 
 | File | Description |
 |------|-------------|
-| [`activity1_straight_1d.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-03-localization/activity1_straight_1d.py) | Activity 1 — 1-D Kalman filter on a straight run |
-| [`activity2_pybullet_2d_v3.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-03-localization/activity2_pybullet_2d_v3.py) | Activity 2 — 2-D Kalman filter with noisy odometry |
-| [`activity3_pybullet_fusion.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-03-localization/activity3_pybullet_fusion.py) | Activity 3 — Sensor fusion (odometry + GPS) |
+| [`activity1_straight_1d.py`](https://github.com/akramfatayer/zuj-robotics/raw/main/labs/lab-03-localization/activity1_straight_1d.py) | Activity 1 — 1-D Kalman filter on a straight run |
+| [`activity2_pybullet_2d_v3.py`](https://github.com/akramfatayer/zuj-robotics/raw/main/labs/lab-03-localization/activity2_pybullet_2d_v3.py) | Activity 2 — 2-D Kalman filter with noisy odometry |
+| [`activity3_pybullet_fusion.py`](https://github.com/akramfatayer/zuj-robotics/raw/main/labs/lab-03-localization/activity3_pybullet_fusion.py) | Activity 3 — Sensor fusion (odometry + GPS) |
 
-> **Download everything at once:** [Download full repository as ZIP](https://github.com/fatayer8891-boop/zuj-robotics/archive/refs/heads/main.zip) — extract and navigate to `zuj-robotics-main/labs/lab-03-localization/`
+> **Download everything at once:** [Download full repository as ZIP](https://github.com/akramfatayer/zuj-robotics/archive/refs/heads/main.zip) — extract and navigate to `zuj-robotics-main/labs/lab-03-localization/`
 
 ---

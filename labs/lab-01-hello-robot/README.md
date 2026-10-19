@@ -21,28 +21,27 @@ By the end of this lab, you will be able to:
 
 ---
 
-## 🛠️ Environment Setup (V3)
+## 🛠️ Environment Setup
 
-To ensure a clean and isolated environment for each student, especially on shared lab computers, you will create a **unique Conda environment** using your name.
+The whole course uses **one shared environment called `zuj-robotics`**: the same name and the same package versions on every machine.
+
+-   **University lab PC:** it's already installed. Double-click **Robotics Lab** on the desktop. Don't create your own environment.
+-   **Your own laptop or PC:** follow [SETUP.md](../../SETUP.md) once (about 15 minutes). In short:
 
 ```bash
-# 1. Create a new Conda environment named 'robotics_YourFirstName'
-#    (Replace 'YourFirstName' with your actual first name, e.g., robotics_Ahmad)
-conda create -n robotics_YourFirstName python=3.11 -y
-
-# 2. Activate the new environment (you must do this every time you open a new terminal)
-conda activate robotics_YourFirstName
-
-# 3. Install all required packages for the course from the 'conda-forge' channel
-#    We use conda-forge because it has a reliable version of PyBullet.
-conda install -c conda-forge pybullet numpy matplotlib opencv -y
+# From the root of the zuj-robotics folder
+conda env create -f environment.yml   # once
+conda activate zuj-robotics           # every time you open a new terminal
+python check_env.py                   # every line should say [OK]
 ```
 
-### **Why Unique Environments?**
+-   **No install at all:** use the Colab notebook for this lab.
 
-Since you share lab computers, creating a unique environment prevents conflicts. If one student installs a different version of a library, it won't break your setup. It guarantees that your code runs the same way every time.
+### **Why One Shared Environment?**
 
-### **Why `conda install` instead of `pip`?**
+Lab PCs are shared between sections, and you may sit at a different PC each session. One read-only environment per PC means nothing to install when you sit down, and nobody can break it for anyone else. Your own laptop gets the identical environment from `environment.yml`, so code that runs at home runs in the lab.
+
+### **Why `conda` instead of `pip`?**
 
 -   **`conda`** is an environment and package manager designed for scientific computing. It manages all your libraries (Python and non-Python) and ensures they are compatible with each other.
 -   **`pip`** is the standard Python package manager. It's great, but `conda` is better at handling complex dependencies in scientific libraries like PyBullet.
@@ -102,16 +101,16 @@ Stuck? That's part of the process! Here’s how to get unstuck:
 
 Run this lab online with one click, or download the Python files to run locally:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-01-hello-robot/notebook.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akramfatayer/zuj-robotics/blob/main/labs/lab-01-hello-robot/Lab_01_Hello_Robot.ipynb)
 &nbsp;&nbsp;**or download individual files below:**
 
 | File | Description |
 |------|-------------|
-| [`spawn_robot.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-01-hello-robot/spawn_robot.py) | Activity 1 — Spawn the robot in simulation |
-| [`read_sensors.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-01-hello-robot/read_sensors.py) | Activity 2 — Read position, orientation, and camera |
-| [`move_robot.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-01-hello-robot/move_robot.py) | Activity 3 — Drive the robot in a square |
-| [`visualize_trajectory.py`](https://github.com/fatayer8891-boop/zuj-robotics/raw/main/labs/lab-01-hello-robot/visualize_trajectory.py) | Activity 4 — Plot and analyse the trajectory |
+| [`spawn_robot.py`](https://github.com/akramfatayer/zuj-robotics/raw/main/labs/lab-01-hello-robot/spawn_robot.py) | Activity 1 — Spawn the robot in simulation |
+| [`read_sensors.py`](https://github.com/akramfatayer/zuj-robotics/raw/main/labs/lab-01-hello-robot/read_sensors.py) | Activity 2 — Read position, orientation, and camera |
+| [`move_robot.py`](https://github.com/akramfatayer/zuj-robotics/raw/main/labs/lab-01-hello-robot/move_robot.py) | Activity 3 — Drive the robot in a square |
+| [`visualize_trajectory.py`](https://github.com/akramfatayer/zuj-robotics/raw/main/labs/lab-01-hello-robot/visualize_trajectory.py) | Activity 4 — Plot and analyse the trajectory |
 
-> **Download everything at once:** [Download full repository as ZIP](https://github.com/fatayer8891-boop/zuj-robotics/archive/refs/heads/main.zip) — extract and navigate to `zuj-robotics-main/labs/lab-01-hello-robot/`
+> **Download everything at once:** [Download full repository as ZIP](https://github.com/akramfatayer/zuj-robotics/archive/refs/heads/main.zip) — extract and navigate to `zuj-robotics-main/labs/lab-01-hello-robot/`
 
 ---

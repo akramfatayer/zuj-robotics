@@ -124,7 +124,7 @@ The course is organized into **four progressive project blocks**, each building 
 
 ## Getting Started
 
-1. Install Anaconda and create your course environment (see Lab 1 README)
+1. Set up the `zuj-robotics` environment on your own laptop with [SETUP.md](SETUP.md), or use the ready-made one on the lab PCs
 2. Read the [Introduction to Robotics](lectures/Introduction_to_Robotics_for_AI_and_Data_Science.pdf) overview
 3. Complete [Lab 1: Hello, Robot!](labs/lab-01-hello-robot/README.md) to meet your robot
 4. Follow the project blocks in sequence — each builds on the previous

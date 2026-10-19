@@ -10,11 +10,11 @@ Every lab is available as a **Jupyter Notebook** that you can run directly in Go
 
 | Lab | Topic | Run Online |
 |-----|-------|:----------:|
-| Lab 1 | Hello, Robot! | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-01-hello-robot/notebook.ipynb) |
-| Lab 3 | Localization | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-03-localization/notebook.ipynb) |
-| Lab 4 | Mapping | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-04-mapping/notebook.ipynb) |
-| Lab 5 | Path Planning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-05-path-planning/notebook.ipynb) |
-| Lab 6 | Tracking & Control | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fatayer8891-boop/zuj-robotics/blob/main/labs/lab-06-tracking-control/notebook.ipynb) |
+| Lab 1 | Hello, Robot! | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akramfatayer/zuj-robotics/blob/main/labs/lab-01-hello-robot/Lab_01_Hello_Robot.ipynb) |
+| Lab 3 | Localization | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akramfatayer/zuj-robotics/blob/main/labs/lab-03-localization/Lab_03_Localization.ipynb) |
+| Lab 4 | Mapping | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akramfatayer/zuj-robotics/blob/main/labs/lab-04-mapping/Lab_04_Mapping.ipynb) |
+| Lab 5 | Path Planning | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akramfatayer/zuj-robotics/blob/main/labs/lab-05-path-planning/Lab_05_Path_Planning.ipynb) |
+| Lab 6 | Tracking & Control | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/akramfatayer/zuj-robotics/blob/main/labs/lab-06-tracking-control/Lab_06_Tracking_Control.ipynb) |
 
 !!! info "Colab vs Local"
     **Google Colab** runs PyBullet in headless mode (no 3D GUI window). You'll see matplotlib plots of trajectories and sensor data instead of the live 3D simulation. For the full interactive 3D experience, run the labs locally using your Conda environment.
@@ -68,18 +68,20 @@ All labs contribute to the **60% PBL component** of your final grade.
 
 ## Environment Setup
 
-All labs use the same Python environment. Set it up once in Lab 1:
+All labs use one shared environment called `zuj-robotics`.
+
+- **University lab PCs:** already installed. Double-click **Robotics Lab** on the desktop.
+- **Your own laptop or PC:** follow [SETUP.md](../SETUP.md) once:
 
 ```bash
-conda create -n robotics_YourFirstName python=3.11 -y
-conda activate robotics_YourFirstName
-conda install -c conda-forge pybullet numpy matplotlib opencv -y
+conda env create -f environment.yml
 ```
 
-Activate this environment at the start of every lab session:
+Activate it and check it at the start of every lab session:
 
 ```bash
-conda activate robotics_YourFirstName
+conda activate zuj-robotics
+python check_env.py
 ```
 
 ---

@@ -37,3 +37,7 @@ Thumbs.db
 
 # Site build
 site/
+
+# Lab PC package (built by conda-pack, see lab-pc/README.md)
+lab-pc/*.tar.gz
+lab-pc/check_env.py

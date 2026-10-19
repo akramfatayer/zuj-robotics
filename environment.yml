@@ -1,0 +1,38 @@
+# Course environment for Intelligent Mobile Robots (0135343)
+#
+# ONE environment for every lab and the final project, on every machine:
+# your laptop, your home PC and the university lab PCs all use the same
+# name (zuj-robotics) and the same package versions.
+#
+#   Create:    conda env create -f environment.yml
+#   Activate:  conda activate zuj-robotics
+#   Check:     python check_env.py
+#   Update:    conda env update -f environment.yml --prune
+#
+# Full instructions: SETUP.md
+
+name: zuj-robotics
+
+channels:
+  - conda-forge   # has ready-made PyBullet builds for Windows, macOS and Linux
+  - nodefaults    # never mix in the Anaconda "defaults" channel
+
+dependencies:
+  - python=3.11
+  - pybullet=3.25
+  - numpy
+  # "-base" and "headless" skip the Qt GUI toolkit: it adds ~1 GB and its deep
+  # folder names can exceed the Windows path limit. Plots use the Tk window
+  # (macOS: the native window), the same as with plain matplotlib.
+  - matplotlib-base
+  - pip
+  - pip:
+      - opencv-python-headless   # same OpenCV build as the Colab notebooks
+
+variables:
+  # Ignore packages installed with "pip install --user". On shared PCs these
+  # leftovers from other students can silently replace the course versions.
+  PYTHONNOUSERSITE: "1"
+  # UTF-8 everywhere. Without it, Windows crashes with UnicodeEncodeError when a
+  # lab's output is saved to a file (python check_my_lab.py > validation_output.txt).
+  PYTHONUTF8: "1"
