@@ -17,17 +17,7 @@ An overview of the course, the Sense-Plan-Act paradigm, and the autonomous wareh
 
 ---
 
-## Lecture 2: Computer Vision for Warehouse Robots
-
-Camera models, image processing, object detection, and how robots "see" their environment.
-
-<iframe src="https://docs.google.com/gview?url=https://fatayer8891-boop.github.io/zuj-hub/robotics/lectures/pdf/Computer_Vision_for_Warehouse_Robots.pdf&embedded=true" style="width:100%; height:600px;" frameborder="0"></iframe>
-
-[:material-download: Download PPTX](Computer_Vision_for_Warehouse_Robots.pptx){ .md-button } [:material-file-pdf-box: Download PDF](pdf/Computer_Vision_for_Warehouse_Robots.pdf){ .md-button .md-button--primary }
-
----
-
-## Lecture 3: Robot Localization and State Estimation
+## Lecture 2: Robot Localization and State Estimation
 
 The Kalman filter, sensor fusion, and how robots answer "Where am I?"
 
@@ -37,7 +27,7 @@ The Kalman filter, sensor fusion, and how robots answer "Where am I?"
 
 ---
 
-## Lecture 4: Distance Sensing and Occupancy Grid Mapping
+## Lecture 3: Distance Sensing and Occupancy Grid Mapping
 
 LiDAR, ray casting, log-odds, and building maps from sensor data.
 
@@ -47,7 +37,7 @@ LiDAR, ray casting, log-odds, and building maps from sensor data.
 
 ---
 
-## Lecture 5: Path Planning and Navigation
+## Lecture 4: Path Planning and Navigation
 
 A* search, RRT, graph-based planning, and finding collision-free paths.
 
@@ -57,7 +47,7 @@ A* search, RRT, graph-based planning, and finding collision-free paths.
 
 ---
 
-## Lecture 6: Path Tracking and Control
+## Lecture 5: Path Tracking and Control
 
 PID control, Pure Pursuit, cross-track error, and smooth path following.
 

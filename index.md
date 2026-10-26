@@ -38,7 +38,7 @@ The course is organized into **four progressive project blocks**, each building 
 
 | Block | Title | Lecture Topic | Lab |
 |-------|-------|---------------|-----|
-| 1 | See the World (Perception) | Introduction to Robotics; Computer Vision for Robots | Lab 1: Hello, Robot! |
+| 1 | See the World (Perception) | Introduction to Robotics | Lab 1: Hello, Robot! |
 | 2 | Know Where You Are (Localization & Mapping) | Localization & State Estimation; Distance Sensing & Occupancy Grids | Lab 3: Localization; Lab 4: Mapping |
 | 3 | Find Your Path (Planning) | Path Planning and Navigation | Lab 5: Path Planning (A*, RRT) |
 | 4 | Move Smoothly (Control) | Path Tracking and Control | Lab 6: Tracking (PID, Pure Pursuit) |
@@ -76,11 +76,10 @@ The course is organized into **four progressive project blocks**, each building 
 | # | Topic | Format |
 |---|-------|--------|
 | 1 | [Introduction to Robotics](lectures/pdf/Introduction_to_Robotics.pdf) | PDF |
-| 2 | [Computer Vision for Warehouse Robots](lectures/pdf/Computer_Vision_for_Warehouse_Robots.pdf) | PDF |
-| 3 | [Robot Localization and State Estimation](lectures/pdf/Robot_Localization_and_State_Estimation.pdf) | PDF |
-| 4 | [Distance Sensing and Occupancy Grid Mapping](lectures/pdf/Distance_Sensing_and_Occupancy_Grid_Mapping.pdf) | PDF |
-| 5 | [Path Planning and Navigation](lectures/pdf/Lab_5_Path_Planning_and_Navigation.pdf) | PDF |
-| 6 | [Path Tracking and Control](lectures/pdf/Lab_6_Path_Tracking_and_Control.pdf) | PDF |
+| 2 | [Robot Localization and State Estimation](lectures/pdf/Robot_Localization_and_State_Estimation.pdf) | PDF |
+| 3 | [Distance Sensing and Occupancy Grid Mapping](lectures/pdf/Distance_Sensing_and_Occupancy_Grid_Mapping.pdf) | PDF |
+| 4 | [Path Planning and Navigation](lectures/pdf/Lab_5_Path_Planning_and_Navigation.pdf) | PDF |
+| 5 | [Path Tracking and Control](lectures/pdf/Lab_6_Path_Tracking_and_Control.pdf) | PDF |
 
 ### Labs
 
