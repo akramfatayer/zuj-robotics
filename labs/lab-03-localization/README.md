@@ -32,10 +32,12 @@ This lab is divided into three progressive activities. You must complete them in
 Before applying the Kalman Filter to a complex robot, you will learn the core mathematics in a simple 1D scenario. A train moves along a straight track. You have noisy velocity readings and noisy position readings.
 - **Task:** Run the script and analyze the output plot. Observe how the Kalman Filter estimate (purple line) is smoother and more accurate than either sensor alone.
 
-### Activity 2: The Robot (2D Kalman Filter with PyBullet)
-**File:** `activity2_pybullet_2d.py`
-Now we apply the Kalman Filter to the R2D2 robot in PyBullet. The robot moves in an L-shape pattern. We simulate noisy odometry and noisy GPS.
-- **Task:** Run the script. Look at the generated plot (`activity2_pybullet_2d.png`). Notice how the "Odometry Only" path drifts away from the true path, while the "Fused" path stays close to the truth.
+### Activity 2: The Robot (Kalman Filter in 2D with Matrices)
+**File:** `activity2_pybullet_2d_v3.py`
+In 2D the state is the position [x, y]ᵀ, so every number in the filter becomes a vector or a matrix. Odometry is the control input of the predict step (u = the displacement it reports, F = I, B = I); a sensor updates the estimate.
+- **Part A:** the script works through Lecture 2's 2D example matrix by matrix: predict with odometry, then update with GPS (H = I) or with a wall sensor that measures only x (H = [1, 0]). The numbers match section 5 of the [interactive module](https://akramfatayer.github.io/courses/robotics/learn/2).
+- **Part B:** the same filter runs on R2D2 driving an L-shaped path in PyBullet. The plot (`activity2_pybullet_2d.png`) shows the path with 2σ uncertainty ellipses, and σx, σy and P₁₂ over time.
+- **Task:** Check Part A by hand for at least K, then run Part B with `SENSOR = "gps"` and `SENSOR = "wall"` and answer the Activity 2 questions below.
 
 ### Activity 3: Odometry + GPS in a Straight Aisle
 **File:** `activity3_pybullet_fusion.py`
@@ -51,22 +53,19 @@ It is the same scenario as sections 3 and 7 of the [interactive module](https://
 
 ---
 
-## Verification and Submission
-
-Before submitting your work, run the automated self-grading script to ensure everything is correct:
-
-```bash
-python check_my_lab.py
-```
-
-If all tests pass, you will see a congratulatory message.
-
-### What to Submit
+## What to Submit
 Zip the following files and upload them to the Moodle submission portal:
 1. `activity1_straight_1d.png`
 2. `activity2_pybullet_2d.png`
 3. `activity3_pybullet_fusion.png`
-4. A short text file (`answers.txt`) answering these Activity 3 questions:
+4. A short text file (`answers.txt`) answering these questions.
+
+   **Activity 2**
+   1. **By hand.** Compute K for the GPS update in Part A and check it against the script.
+   2. **The wall sensor.** In Part A the wall sensor measures only x, yet the y estimate changes. Why? What would happen if P⁻₁₂ were 0?
+   3. **Ellipses.** Run Part B with `SENSOR = "wall"`. Why do the ellipses get long in y after the turn, while σx stays small?
+
+   **Activity 3**
    1. **The gated reset.** Find a jump in Plot A. How far from the truth was the estimate just before the jump, and just after it? Run `GATE = 2`, `4` and `10` and report the error each time. Why can the gated reset never be much better than GPS alone, whatever the gate?
    2. **Tuning Q.** Run `Q = 0.0001`, `0.03` and `3`. Report the Kalman filter's error for each and explain what goes wrong when Q is too small and when it is too large.
    3. **A worse GPS.** Set `GPS_STD = 6`. Which is better on its own now, odometry or GPS? Find the Q that gives the lowest Kalman error. How can a sensor that is worse on its own still improve the estimate?
