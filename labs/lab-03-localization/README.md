@@ -37,11 +37,17 @@ Before applying the Kalman Filter to a complex robot, you will learn the core ma
 Now we apply the Kalman Filter to the R2D2 robot in PyBullet. The robot moves in an L-shape pattern. We simulate noisy odometry and noisy GPS.
 - **Task:** Run the script. Look at the generated plot (`activity2_pybullet_2d.png`). Notice how the "Odometry Only" path drifts away from the true path, while the "Fused" path stays close to the truth.
 
-### Activity 3: Sensor Fusion (The Full Pipeline)
+### Activity 3: Odometry + GPS in a Straight Aisle
 **File:** `activity3_pybullet_fusion.py`
-This is the complete sensor fusion pipeline. The robot moves in a continuous circle. Odometry updates at 10Hz, but GPS only updates at 1Hz (every 10 steps).
-- **Task:** Run the script. The terminal will output the Root Mean Square Error (RMSE) for Odometry, GPS, and the Fused estimate.
-- **Goal:** The Fused RMSE must be lower than both the Odometry RMSE and the GPS RMSE. This proves that fusing two bad sensors creates one good estimate!
+R2D2 drives 60 m down a straight aisle. Odometry (10 Hz) over-reads slightly and drifts about 6 m; GPS (1 Hz, σ = 3 m) never drifts but each fix is about 3 m off. The script compares four estimates, each averaged over 20 runs:
+1. **Odometry alone** (dead reckoning)
+2. **GPS alone** (hold the last fix)
+3. **The gated reset** from Lecture 2: follow odometry, and jump to a GPS fix when it lies outside a gate
+4. **The Kalman filter**: predict with odometry (the control input), update with GPS
+
+It is the same scenario as sections 3 and 7 of the [interactive module](https://akramfatayer.github.io/courses/robotics/learn/2).
+- **Task:** Run the script, then change `GATE`, `Q` and `GPS_STD` in the **EXPERIMENT** block at the top and run it again. Answer the questions below.
+- **Goal:** With the default settings, the Kalman filter's error is about 1 m, against about 3 m for odometry alone, GPS alone and the gated reset.
 
 ---
 
@@ -60,7 +66,11 @@ Zip the following files and upload them to the Moodle submission portal:
 1. `activity1_straight_1d.png`
 2. `activity2_pybullet_2d.png`
 3. `activity3_pybullet_fusion.png`
-4. A short text file (`answers.txt`) answering this question: *In Activity 3, why does the position uncertainty (Plot D) look like a sawtooth pattern? What causes it to grow, and what causes it to drop?*
+4. A short text file (`answers.txt`) answering these Activity 3 questions:
+   1. **The gated reset.** Find a jump in Plot A. How far from the truth was the estimate just before the jump, and just after it? Run `GATE = 2`, `4` and `10` and report the error each time. Why can the gated reset never be much better than GPS alone, whatever the gate?
+   2. **Tuning Q.** Run `Q = 0.0001`, `0.03` and `3`. Report the Kalman filter's error for each and explain what goes wrong when Q is too small and when it is too large.
+   3. **A worse GPS.** Set `GPS_STD = 6`. Which is better on its own now, odometry or GPS? Find the Q that gives the lowest Kalman error. How can a sensor that is worse on its own still improve the estimate?
+   4. **The sawtooth.** Why does the variance P (Plot C) look like a sawtooth? What makes it grow, and what makes it drop?
 
 ---
 
