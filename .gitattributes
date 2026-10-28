@@ -1,3 +1,6 @@
 # Windows batch files are stored with CRLF as-is, so they stay CRLF even
 # when downloaded raw from GitHub (cmd.exe can misparse LF-only .bat files)
 *.bat -text
+
+# Read on Windows lab PCs in Notepad: keep CRLF as-is
+"lab-pc/START HERE.txt" -text
