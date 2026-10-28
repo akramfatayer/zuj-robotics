@@ -145,6 +145,7 @@ def main():
 
     # Visualize
     plot_activity1(true_p, z, est, var)
+    plt.show()  # open the plot windows (in Colab they appear under the cell)
 
 if __name__ == '__main__':
     main()

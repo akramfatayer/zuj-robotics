@@ -292,6 +292,7 @@ def main():
     print(f"  GPS alone is {s['gps']:.2f} m: no gate gets far below it.")
 
     plot_results(truth, GATE, Q, GPS_STD, sweep)
+    plt.show()  # open the plot window (in Colab it appears under the cell)
 
 
 if __name__ == "__main__":

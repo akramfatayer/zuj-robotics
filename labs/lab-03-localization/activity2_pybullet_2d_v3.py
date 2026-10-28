@@ -274,6 +274,7 @@ def part_b():
 def main():
     part_a()
     part_b()
+    plt.show()  # open the plot window (in Colab it appears under the cell)
 
 
 if __name__ == "__main__":
