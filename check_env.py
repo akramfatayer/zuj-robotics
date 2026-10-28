@@ -14,6 +14,7 @@ or see the Troubleshooting section of SETUP.md.
 import importlib
 import importlib.metadata
 import os
+import subprocess
 import sys
 import time
 from contextlib import contextmanager
@@ -106,6 +107,24 @@ for module_name, label, purpose in PACKAGES:
     except Exception as error:  # ImportError, or a broken DLL on Windows
         fail(f"{label} cannot be imported: {error}",
              "Run: conda env update -f environment.yml --prune")
+
+# ---------------------------------------------------------------------------
+# 3b. NumPy's matrix functions (np.linalg, used by every Kalman filter lab)
+#     load a separate maths library. If Windows cannot find its DLLs, Python
+#     dies without a message, so test it in a separate process.
+# ---------------------------------------------------------------------------
+LINALG_TEST = "import numpy as np; assert abs(np.linalg.inv(np.eye(2) * 2)[0, 0] - 0.5) < 1e-12"
+try:
+    result = subprocess.run([sys.executable, "-c", LINALG_TEST], capture_output=True, timeout=60)
+    linalg_ok = result.returncode == 0
+except Exception:
+    linalg_ok = False
+if linalg_ok:
+    ok("NumPy matrix maths (np.linalg) works")
+else:
+    fail("NumPy matrix maths (np.linalg) crashed",
+         "Start Python from the Robotics Lab shortcut (or after conda activate zuj-robotics). "
+         "On a lab PC that still fails, antivirus may have removed a file: reinstall with deploy_lab_pc.bat")
 
 # ---------------------------------------------------------------------------
 # 4. Packages from "pip install --user" can hide the course versions.

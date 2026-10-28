@@ -1,0 +1,67 @@
+ROBOTICS LAB PCs - START HERE
+Intelligent Mobile Robots (0135343) - Dr. Akram Fatayer
+=======================================================
+
+This folder installs the course's Python environment on the lab PCs.
+It is ready to use: no internet and no Anaconda are needed on the PCs.
+About 3 minutes per PC.
+
+
+BEFORE THE FIRST PC
+-------------------
+- Deep Freeze or Reboot Restore: if the PCs use one, put them in
+  thawed/maintenance mode first, and freeze them again when you finish.
+- Students must log in with STANDARD (non-administrator) accounts.
+
+
+ON EACH LAB PC
+--------------
+1. Log in with an ADMINISTRATOR account.
+
+2. Copy this whole folder to C:\Temp\lab-pc
+   (do not run it from a network drive).
+
+3. Right-click  deploy_lab_pc.bat  ->  Run as administrator  ->  Yes.
+
+4. Wait. Step 2 (extracting) takes 1 to 3 minutes.
+   The window must end with:   This PC is ready.
+   Press any key to close it.
+
+5. Log out. Log in with a STUDENT account and double-click
+       C:\envs\verify_lab_pc.bat
+   A robot window opens for 3 seconds, then a plot window: close the plot.
+   The window must end with:   This PC passed. Students can use it.
+
+6. Delete C:\Temp\lab-pc.
+
+If a PC fails, run deploy_lab_pc.bat again (it replaces the old copy),
+then see Troubleshooting in Lab-PC-Setup-Guide.pdf.
+
+
+WHAT IS IN THIS FOLDER
+----------------------
+START HERE.txt            this page
+Lab-PC-Setup-Guide.pdf    the full guide: checklist, tracker, troubleshooting
+deploy_lab_pc.bat         the installer: run it on each PC as administrator
+verify_lab_pc.bat         the student-account check (the installer copies it to C:\envs)
+Robotics-Lab.bat          the desktop shortcut students use (the installer copies it)
+check_env.py              the environment checker (the installer copies it)
+zuj-robotics.tar.gz       the packed environment
+
+zuj-robotics.tar.gz must be exactly 479,021,646 bytes. To check a copy,
+in Command Prompt:   certutil -hashfile zuj-robotics.tar.gz SHA256
+must print:          65e1cc722ce42552d13ae5d054f32f038d6fc104c0c7883a77fecb9218891cf1
+
+
+WHAT THE INSTALLER CHANGES
+--------------------------
+C:\envs\zuj-robotics                        the environment (Python 3.11, PyBullet,
+                                            NumPy, Matplotlib, OpenCV)
+C:\envs\check_env.py, verify_lab_pc.bat     the checker and the student check
+C:\Users\Public\Desktop\Robotics Lab.bat    the shortcut, for every account
+C:\envs permissions                         students can read and run, not change
+
+It does not touch PATH, the registry, or any other Python or Anaconda install.
+
+
+Questions: Dr. Akram Fatayer - akram.fatayer@hotmail.com

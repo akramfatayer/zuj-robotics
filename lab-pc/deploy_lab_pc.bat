@@ -19,9 +19,11 @@ if errorlevel 1 (
     echo Please right-click this file and choose "Run as administrator".
     pause & exit /b 1
 )
-if not exist "%SRC%zuj-robotics.tar.gz" (
-    echo zuj-robotics.tar.gz was not found next to this script.
-    pause & exit /b 1
+for %%F in (zuj-robotics.tar.gz check_env.py Robotics-Lab.bat verify_lab_pc.bat) do (
+    if not exist "%SRC%%%F" (
+        echo %%F was not found next to this script. Copy the whole lab-pc folder again.
+        pause & exit /b 1
+    )
 )
 
 echo [1/5] Removing any old version and locking C:\envs...
@@ -43,6 +45,7 @@ if errorlevel 1 ( echo conda-unpack failed. & pause & exit /b 1 )
 
 echo [4/5] Installing the checker and the desktop shortcut...
 copy /y "%SRC%check_env.py" "C:\envs\check_env.py" >nul
+copy /y "%SRC%verify_lab_pc.bat" "C:\envs\verify_lab_pc.bat" >nul
 copy /y "%SRC%Robotics-Lab.bat" "C:\Users\Public\Desktop\Robotics Lab.bat" >nul
 
 echo [5/5] Testing the installation:
@@ -56,5 +59,6 @@ if errorlevel 1 (
     echo DEPLOYMENT FINISHED WITH ERRORS - see the [FAIL] lines above.
 ) else (
     echo This PC is ready.
+    echo Next: log in with a STUDENT account and double-click C:\envs\verify_lab_pc.bat
 )
 pause

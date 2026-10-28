@@ -34,15 +34,20 @@ Optionally run one lab script of each block before packing, as a smoke test.
 For reference (October 2026 build): the environment is about 1.4 GB, the
 packed file about 480 MB, and extraction takes under a minute on an SSD.
 
-`lab-pc\` now holds everything a lab PC needs:
+`lab-pc\` now holds everything a lab PC needs, and goes to the lab supervisor as it is:
 
 ```
 lab-pc\
-  zuj-robotics.tar.gz    the packed environment (do not commit to git)
-  check_env.py           environment checker
-  deploy_lab_pc.bat      installer, run on each PC
-  Robotics-Lab.bat       desktop shortcut, installed by deploy_lab_pc.bat
+  START HERE.txt           one-page steps for the supervisor (update size and SHA256 after a rebuild)
+  Lab-PC-Setup-Guide.pdf   the full supervisor guide, exported from the course docs
+  zuj-robotics.tar.gz      the packed environment (do not commit to git)
+  check_env.py             environment checker
+  deploy_lab_pc.bat        installer, run on each PC
+  verify_lab_pc.bat        student-account check, copied to C:\envs by the installer
+  Robotics-Lab.bat         desktop shortcut, installed by deploy_lab_pc.bat
 ```
+
+This README is for the instructor: leave it out of the supervisor's copy.
 
 ## 2. Install on each lab PC (about 2 minutes per PC)
 
@@ -56,6 +61,10 @@ The script:
 3. puts **Robotics Lab** on the Public Desktop (visible to every account)
 4. makes `C:\envs` read-only for the `Users` group
 5. runs `check_env.py` and reports `This PC is ready.`
+
+Then log in as a student and double-click `C:\envs\verify_lab_pc.bat`: it checks the
+shortcut, that the account is a standard one, that `C:\envs` is read-only, every package
+(with the 3D window) and a plot window, and ends with `This PC passed.`
 
 If IT uses disk images, deploy on the master PC once and capture the image instead.
 
