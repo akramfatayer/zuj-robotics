@@ -1,5 +1,7 @@
 # Lab 3: Robot Localization and Sensor Fusion
 
+> **MATLAB track:** the same lab, with the same questions, as MATLAB live scripts using the Sensor Fusion and Tracking Toolbox: see [`matlab/README.md`](matlab/README.md).
+
 ## Mission Context
 In the previous labs, you learned how to command the R2D2 robot to move (Lab 1) and how to use a camera to detect objects (Lab 2). However, for a robot to be truly autonomous, it must answer the most fundamental question: **"Where am I?"**
 
