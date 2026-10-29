@@ -31,8 +31,8 @@ This lab is divided into three progressive activities. You must complete them in
 
 ### Activity 1: The Math (1D Kalman Filter)
 **File:** `activity1_straight_1d.py`
-Before applying the Kalman Filter to a complex robot, you will learn the core mathematics in a simple 1D scenario. A train moves along a straight track. You have noisy velocity readings and noisy position readings.
-- **Task:** Run the script and analyze the output plot. Observe how the Kalman Filter estimate (purple line) is smoother and more accurate than either sensor alone.
+Before applying the Kalman Filter to a complex robot, you will learn the core mathematics in a simple 1D scenario. A robot drives along a straight line at about 1 m/s, and a sensor measures its position once per second with noise (σ = 1 m). A constant-velocity Kalman filter (state: position and velocity) combines the motion model with these readings.
+- **Task:** Run the script and analyze the output plot (`activity1_straight_1d.png`). Observe how the Kalman Filter estimate (blue line) is smoother and more accurate than the noisy measurements, and how its ±2σ band narrows as the filter learns the speed.
 
 ### Activity 2: The Robot (Kalman Filter in 2D with Matrices)
 **File:** `activity2_pybullet_2d_v3.py`

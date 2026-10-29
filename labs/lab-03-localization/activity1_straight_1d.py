@@ -92,33 +92,31 @@ def run_kf_cv_1d(measurements, dt=1.0, p0=0.0, v0=0.0,
     return est, var
 
 # ---------------- Plotting ----------------
-def plot_activity1(true_p, z, est, var, out_prefix='activity1'):
-    """Make two clean plots: trajectory with ±2σ band, and error vs time.
+def plot_activity1(true_p, z, est, var, out_file='activity1_straight_1d.png'):
+    """One figure, two clean plots: trajectory with ±2σ band, and error vs time.
     Keep visuals minimal (legend + grid) for a first exposure.
     """
     t = np.arange(len(true_p))
     std = np.sqrt(var)
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(12, 9))
 
     # Plot 1: Trajectory with ±2σ band
-    plt.figure(figsize=(12, 5))
-    plt.plot(t, true_p, 'g-', lw=2, label='True Position')
-    plt.scatter(t, z, c='r', s=18, alpha=0.5, label='Noisy Measurements')
-    plt.plot(t, est, 'b-', lw=2, label='KF Estimate')
-    plt.fill_between(t, est - 2*std, est + 2*std, color='blue', alpha=0.2, label='±2σ band')
-    plt.xlabel('Time step'); plt.ylabel('Position (m)')
-    plt.title('Activity 1: 1‑D CV Kalman Filter — Straight Line')
-    plt.grid(True, alpha=0.3); plt.legend()
-    plt.tight_layout(); plt.savefig(out_prefix + '_traj.png', dpi=300)
-    print('Saved', out_prefix + '_traj.png')
+    ax1.plot(t, true_p, 'g-', lw=2, label='True Position')
+    ax1.scatter(t, z, c='r', s=18, alpha=0.5, label='Noisy Measurements')
+    ax1.plot(t, est, 'b-', lw=2, label='KF Estimate')
+    ax1.fill_between(t, est - 2*std, est + 2*std, color='blue', alpha=0.2, label='±2σ band')
+    ax1.set_xlabel('Time step'); ax1.set_ylabel('Position (m)')
+    ax1.set_title('Activity 1: 1‑D CV Kalman Filter — Straight Line')
+    ax1.grid(True, alpha=0.3); ax1.legend()
 
     # Plot 2: Estimation error (for intuition about bias and noise)
-    err = est - true_p
-    plt.figure(figsize=(12, 4))
-    plt.plot(t, err, 'k-')
-    plt.xlabel('Time step'); plt.ylabel('Position Error (m)')
-    plt.title('Activity 1: Estimation Error over Time')
-    plt.grid(True, alpha=0.3); plt.tight_layout(); plt.savefig(out_prefix + '_error.png', dpi=300)
-    print('Saved', out_prefix + '_error.png')
+    ax2.plot(t, est - true_p, 'k-')
+    ax2.set_xlabel('Time step'); ax2.set_ylabel('Position Error (m)')
+    ax2.set_title('Activity 1: Estimation Error over Time')
+    ax2.grid(True, alpha=0.3)
+
+    fig.tight_layout(); fig.savefig(out_file, dpi=200)
+    print('Saved', out_file)
 
 # ---------------- Main ----------------
 
@@ -145,7 +143,7 @@ def main():
 
     # Visualize
     plot_activity1(true_p, z, est, var)
-    plt.show()  # open the plot windows (in Colab they appear under the cell)
+    plt.show()  # open the plot window (in Colab it appears under the cell)
 
 if __name__ == '__main__':
     main()
