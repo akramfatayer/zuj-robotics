@@ -1,5 +1,7 @@
 # Lab 1: Hello, Robot! - The First Step to Autonomy
 
+> **MATLAB track:** the same lab in Simulink, with the robot shown in 2D, in 3D, or in an Unreal Engine scene: see [`matlab/README.md`](matlab/README.md).
+
 ## 🚀 Mission Context
 
 Welcome to your first lab! This isn't just about running scripts; it's the foundational step in our semester-long mission to build a fully autonomous vehicle. The skills you master today—spawning a robot, reading its senses, and controlling its movement—are the fundamental building blocks of the entire system.
