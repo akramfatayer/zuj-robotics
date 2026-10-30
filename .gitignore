@@ -35,6 +35,11 @@ Thumbs.db
 # Conda
 *.conda
 
+# MATLAB / Simulink: editor autosaves and the simulation cache
+*.asv
+*.slxc
+slprj/
+
 # Site build
 site/
 
